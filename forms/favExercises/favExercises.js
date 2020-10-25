@@ -1,6 +1,39 @@
 var exercises = ["pullups","pushups","situps","jogging","plank","curls"]
 var coreExercises = ["situps","plank"]
 
+
+favExercises.onshow=function(){
+  for (i = 0; i <= exercises.length - 1; i++) {
+    selExercises.addItem(exercises[i])
+}
+}
+
+selExercises.onfocusout = function() {
+for (i = 0; i < coreExercises.length - 1; i++) {
+  selExercises.addItem(coreExercises[i])
+}
+}
+
+btnDone.onclick = function() {
+  if (selExercises.text[0] == "situps" && selExercises.text[1] == "plank") {
+    lblFav.hidden = false
+    lblFav.textContent = `You chose ${selExercises.text[0]} and ${selExercises.text[1]} - those are the two core exercises.`
+  } else {
+    lblFav.hidden = false
+    lblFav.textContent = "You did not pick the two core exercises"
+  }
+}
+
+btnNextPage3.onclick = function() {
+  ChangeForm(mobileNav)
+}
+
+
+
+/* 
+var exercises = ["pullups","pushups","situps","jogging","plank","curls"]
+var coreExercises = ["situps","plank"]
+
 favExercises.onshow=function(){
 drpDesserts.clear()   
     for (i = 0; i <= exercises.length - 1; i++) 
@@ -13,7 +46,7 @@ selExercises.onfocusout=function(){
 
 }
 
-
+*/
 /*Basic Scenario:
 Complete the favExercises.onshow event handler so it populates the select list from both the 'exercises' and
 'coreExercises' arrays when the form loads/starts. 
@@ -36,6 +69,7 @@ Add a button on the right bottom corner of the form that, when clicked, goes to 
 
 */
 
+/*
 btnDone.onclick=function(){
   // text returned is an array of the text choices made by the user
   let message = "You chose " 
@@ -50,3 +84,5 @@ btnDone.onclick=function(){
 btnNextPage3.onclick=function(){
   ChangeForm(mobileNav)
 }
+*/
+
