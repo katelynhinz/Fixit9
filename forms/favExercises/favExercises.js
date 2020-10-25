@@ -38,14 +38,12 @@ Add a button on the right bottom corner of the form that, when clicked, goes to 
 
 btnDone.onclick=function(){
   // text returned is an array of the text choices made by the user
-  let message = "Your favorite sandwiches are:" 
+  let message = "You chose " 
   for (i = 0; i <= selExercises.text.length - 1; i++)
-     message = message + selExercises.text[i] + ", "
-  // remove the last comma; slice starts at 0, and goes 
-  // to end of the string minus 1 - net effect of dropping 
-  // last 2 characters (comma and space)
-  message = message.slice(0, -2);
-  console.log(message)
+    message = message + selExercises.text[0] + " and " + selExercises.text[1]
+    // message = message.slice(0, -2);
+    lblFav.hidden = false
+    lblFav.textContent = message
 }
 
 
