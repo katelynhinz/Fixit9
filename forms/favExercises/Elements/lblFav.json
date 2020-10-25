@@ -21,7 +21,7 @@
   "height": "auto",
   "hidden": "display:none; ",
   "id": "lblFav",
-  "left": 70,
+  "left": 32,
   "mAll": "",
   "mBottom": "",
   "mLeft": "",
@@ -45,6 +45,6 @@
   "script": "",
   "style": "",
   "text": "Label",
-  "top": 408,
+  "top": 382,
   "width": "auto"
 }
